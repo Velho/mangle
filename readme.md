@@ -9,6 +9,5 @@ Currently implemented
 <!---image --->
 ![image](screenshot.png)
 
-TODO: 
+TODO:
 - Could be used to determine that function names use the given standard
-
