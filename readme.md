@@ -1,7 +1,10 @@
-# Tool to parse C code base function names
-[![GitHub Super-Linter](https://github.com/oasdflkjo/parse-function-names/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+# Mangle v0.1
+[![GitHub Super-Linter](https://github.com/oasdflkjo/mangle/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
-Used to analyse code base function count
+Tool for analyzing code base.
+
+Currently implemented
+- function frequency
 
 <!---image --->
 ![image](screenshot.png)
