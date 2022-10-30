@@ -9,11 +9,11 @@ from timeit import default_timer as timer
 # start timer
 start = timer()
 
-project_path = "C:\\Users\\petri\\c\\nginx\\"
+PROJECT_PATH = "C:\\Users\\petri\\c\\nginx\\"
 list_of_files = []
 dictionary_of_functions = {}
 
-for root, dirs, files in walk(project_path):
+for root, dirs, files in walk(PROJECT_PATH):
     for file in files:
         if file.endswith(".c" or ".h"):
             # append file path to list
@@ -26,7 +26,7 @@ for i in list_of_files:
             function = re.search(r"[A-Za-z0-9_]+\(", line)
             if function:
                 #remove last character from string
-                string = function.group()[:-1]        
+                string = function.group()[:-1]
                 # if function name is not in dictionary
                 if string not in dictionary_of_functions:
                     # add function name to dictionary
