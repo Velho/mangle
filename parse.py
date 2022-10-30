@@ -29,7 +29,7 @@ def get_function_names(filepaths):
             for line in file:
                 function = re.findall(r"[A-Za-z0-9_]+\(", line)
                 if function:
-                    if function.__len__() > 1:
+                    if len(function) > 1:
                         for f in function:
                             string = f[:-1]
                             if string in dictionary_of_functions:
