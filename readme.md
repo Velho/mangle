@@ -4,7 +4,7 @@
 Tool for analyzing code base.
 
 Currently implemented
-- function frequency
+- analyze function frequenczy and export to csv
 
 <!---image --->
 ![image](screenshot.png)
