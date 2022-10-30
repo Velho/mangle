@@ -22,19 +22,26 @@ def get_file_paths(path):
     return list_of_file_paths
 
 
-# does this catch all if multiple functions are on the same line?
 def get_function_names(filepaths):
     """Returns a dictionary of function names and their count."""
     for filepath in filepaths:
         with open(filepath, "r") as file:
             for line in file:
-                function = re.search(r"[A-Za-z0-9_]+\(", line)
+                function = re.findall(r"[A-Za-z0-9_]+\(", line)
                 if function:
-                    string = function.group()[:-1]
-                    if string in dictionary_of_functions:
-                        dictionary_of_functions[string] += 1
+                    if function.__len__() > 1:
+                        for f in function:
+                            string = f[:-1]
+                            if string in dictionary_of_functions:
+                                dictionary_of_functions[string] += 1
+                            else:
+                                dictionary_of_functions[string] = 1
                     else:
-                        dictionary_of_functions[string] = 1
+                        string = function.pop()[:-1]
+                        if string in dictionary_of_functions:
+                            dictionary_of_functions[string] += 1
+                        else:
+                            dictionary_of_functions[string] = 1
     return dictionary_of_functions
 
 
