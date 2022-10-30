@@ -9,7 +9,7 @@ Currently implemented
 <!---image --->
 ![image](screenshot.png)
 
-run against nginx [Link to google sheets](https://docs.google.com/spreadsheets/d/1diopAW_2KzM7L-IUzC0j4iph3aUpERU_IODNkk5xfR0/edit?usp=sharing)
+run against nginx [Link to google sheets](https://docs.google.com/spreadsheets/d/1crQyoxLpZhjzFrsiogF74hqWBomWeefxM4VVichnnK4/edit?usp=sharing)
 
 TODO:
 - Could be used to determine that function names use the given standard

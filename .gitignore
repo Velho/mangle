@@ -1,1 +1,3 @@
-function_names.csv
+*.csv
+*.exe
+*.c
