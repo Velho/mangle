@@ -66,14 +66,13 @@ if __name__ == "__main__":
     start = timer()
 
     PROJECT_PATH = "C:\\Users\\petri\\c\\nginx\\"
-
     CSV_PATH = "C:\\Users\\petri\\python\\parse-function-names\\function_names.csv"
 
     list_of_file_paths = []
     dictionary_of_functions = {}
 
     list_of_file_paths = get_file_paths(PROJECT_PATH)
-    get_function_names(list_of_file_paths)
+    dictionary_of_functions = get_function_names(list_of_file_paths)
     dictionary_of_functions = sort_by_count(dictionary_of_functions)
     sort_by_count(dictionary_of_functions)
     save_as_csv(CSV_PATH, dictionary_of_functions)
