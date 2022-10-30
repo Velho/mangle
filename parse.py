@@ -21,9 +21,10 @@ def get_file_paths(path):
                 list_of_file_paths.append(dirpath + "\\" + filename)
     return list_of_file_paths
 
-
+# TODO: shold be split into smaller functions for better readability
 def get_function_names(filepaths):
     """Returns a dictionary of function names and their count."""
+    dictionary_of_functions = {}
     for filepath in filepaths:
         with open(filepath, "r") as file:
             for line in file:
