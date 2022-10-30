@@ -2,8 +2,8 @@
 # Date      2022-10-30
 # License   MIT
 
-from os import walk
 import re
+from os import walk
 from timeit import default_timer as timer
 
 # start timer
@@ -25,7 +25,7 @@ for i in list_of_files:
             # macth function names
             function = re.search(r"[A-Za-z0-9_]+\(", line)
             if function:
-                #remove last character from string
+                # remove last character from string
                 string = function.group()[:-1]
                 # if function name is not in dictionary
                 if string not in dictionary_of_functions:
