@@ -24,14 +24,16 @@ def get_file_paths(path):
     return list_of_file_paths
 
 
+# TODO: shold be split into smaller functions for better readability
 def get_function_names(filepaths):
     """Returns a dictionary of function names and their count."""
+    dictionary_of_functions = {}
     for filepath in filepaths:
         with open(filepath, "r") as file:
             for line in file:
                 function = re.findall(r"[A-Za-z0-9_]+\(", line)
                 if function:
-                    if function.__len__() > 1:
+                    if len(function) > 1:
                         for f in function:
                             string = f[:-1]
                             if string in dictionary_of_functions:
