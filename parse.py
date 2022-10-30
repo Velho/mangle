@@ -11,6 +11,8 @@ import re
 from os import walk
 from timeit import default_timer as timer
 
+from args import arg_parser, welcome_banner
+
 
 def get_file_paths(path):
     """Returns a list of all file paths in the given directory tree."""
@@ -65,8 +67,11 @@ if __name__ == "__main__":
     """Main function to run the script."""
     start = timer()
 
-    PROJECT_PATH = "C:\\Users\\petri\\c\\nginx\\"
-    CSV_PATH = "C:\\Users\\petri\\python\\parse-function-names\\function_names.csv"
+    welcome_banner()
+    args = arg_parser()
+
+    PROJECT_PATH = args.project
+    CSV_PATH = args.output
 
     list_of_file_paths = []
     dictionary_of_functions = {}
