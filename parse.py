@@ -21,6 +21,7 @@ def get_file_paths(path):
                 list_of_file_paths.append(dirpath + "\\" + filename)
     return list_of_file_paths
 
+
 # does this catch all if multiple functions are on the same line?
 def get_function_names(filepaths):
     """Returns a dictionary of function names and their count."""
