@@ -1,6 +1,8 @@
 # Mangle v0.1
 [![GitHub Super-Linter](https://github.com/oasdflkjo/mangle/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
+![image](screenshot2.png)
+
 Tool for analyzing C codebase.
 
 Currently implemented

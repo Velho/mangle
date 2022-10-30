@@ -1,3 +1,5 @@
 *.csv
 *.exe
 *.c
+__pycache__
+*.pyc
