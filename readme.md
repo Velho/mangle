@@ -1,7 +1,7 @@
 # Mangle v0.1
 [![GitHub Super-Linter](https://github.com/oasdflkjo/mangle/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
-Tool for analyzing C code base.
+Tool for analyzing C codebase.
 
 Currently implemented
 - analyze function frequenczy and export to csv
