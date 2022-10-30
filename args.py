@@ -1,4 +1,5 @@
-# Module to parse the command line arguments.
+""" Module to parse the command line arguments.
+"""
 
 from argparse import ArgumentParser
 from queue import Empty
@@ -19,11 +20,19 @@ DEFAULT_BANNER = """
 
 
 def welcome_banner():
+    """
+    Welcome welcome welcome
+    """
     print(f"{DEFAULT_BANNER}")
     print(f"Welcome to mangler v.{VERSION}")
 
 
 def arg_parser():
+    """ Public function
+    Initializes the parser and
+    Returns the arguments if no arguments provided,
+    return the help message.
+    """
     parser = init_parser()
     args = get_args(parser)
 
@@ -32,10 +41,14 @@ def arg_parser():
 
     return args
 
-# Initializes the argument parser.
-
 
 def init_parser():
+    """ Initializes the argument parser.
+    Adds the default parser options,
+    -p, --project as the project folder,
+    -o, --output as the output csv filename,
+    """
+
     parser = ArgumentParser()
     parser.add_argument('--project', '-p', help='Input project folder.',
                         default=DEFAULT_PROJECT_PATH, type=str)
@@ -44,8 +57,8 @@ def init_parser():
 
     return parser
 
-# Parse the arguments.
-
 
 def get_args(parser):
+    """ Returns the parsed arguments.
+    """
     return parser.parse_args()
