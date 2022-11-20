@@ -14,7 +14,7 @@ Currently implemented
 run against nginx [Link to google sheets](https://docs.google.com/spreadsheets/d/1crQyoxLpZhjzFrsiogF74hqWBomWeefxM4VVichnnK4/edit?usp=sharing)
 
 
-# Things to condsider
+## Things to condsider
 
 Codebase will be a mess for now cos will be adding features before considerng how everyting should be organized.
 
