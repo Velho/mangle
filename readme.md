@@ -18,10 +18,11 @@ run against nginx [Link to google sheets](https://docs.google.com/spreadsheets/d
 
 Codebase will be a mess for now cos will be adding features before considerng how everyting should be organized.
 
-
+## List of TODO in no particular order
+1. Venv files for easy setup on a new system
 1. Use [pycparser](https://pypi.org/project/pycparser/) tokenizer to get rid of brute force string parsing.
 1. Check that function names use wanted convention.
 1. Check that files use wanted convention.
-1. Add [curses](https://docs.python.org/3/howto/curses.html) gui.
+1. Add [curses](https://docs.python.org/3/howto/curses.html) GUI.
     1. Possible visualisations.
 1. Data storage module instead of csv files.
