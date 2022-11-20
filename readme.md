@@ -1,7 +1,7 @@
 # Mangle v0.1
 [![GitHub Super-Linter](https://github.com/oasdflkjo/mangle/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
-![image](screenshot2.png)
+![image](pics/screenshot2.png)
 
 Tool for analyzing C codebase.
 
@@ -9,7 +9,7 @@ Currently implemented
 - analyze function frequency and export to csv
 
 <!---image --->
-![image](screenshot.png)
+![image](pics/screenshot.png)
 
 run against nginx [Link to google sheets](https://docs.google.com/spreadsheets/d/1crQyoxLpZhjzFrsiogF74hqWBomWeefxM4VVichnnK4/edit?usp=sharing)
 
@@ -19,9 +19,9 @@ run against nginx [Link to google sheets](https://docs.google.com/spreadsheets/d
 Codebase will be a mess for now cos will be adding features before considerng how everyting should be organized.
 
 
-1. Tokenizer to get rid of brute force string parsing. [pycparser](https://pypi.org/project/pycparser/)
+1. Use [pycparser](https://pypi.org/project/pycparser/) tokenizer to get rid of brute force string parsing.
 1. Check that function names use wanted convention.
 1. Check that files use wanted convention.
-1. Add ncurses gui.
-  1. Possible visualisations.
+1. Add [pycparser](https://docs.python.org/3/howto/curses.html) gui.
+    1. Possible visualisations.
 1. Data storage module instead of csv files.
