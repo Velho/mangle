@@ -13,5 +13,15 @@ Currently implemented
 
 run against nginx [Link to google sheets](https://docs.google.com/spreadsheets/d/1crQyoxLpZhjzFrsiogF74hqWBomWeefxM4VVichnnK4/edit?usp=sharing)
 
-TODO:
-- Could be used to determine that function names use the given standard
+
+# Things to condsider
+
+Codebase will be a mess for now cos will be adding features before considerng how everyting should be organized.
+
+
+1. Tokenizer to get rid of brute force string parsing. [pycparser](https://pypi.org/project/pycparser/)
+1. Check that function names use wanted convention.
+1. Check that files use wanted convention.
+1. Add ncurses gui.
+  1. Possible visualisations.
+1. Data storage module instead of csv files.

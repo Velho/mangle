@@ -31,20 +31,30 @@ def get_function_names(filepaths):
     for filepath in filepaths:
         with open(filepath, "r") as file:
             for line in file:
-                function = re.findall(r"#include <[A-Za-z0-9_]+\.h>", line)
-                if function:
-                    string = function[0]
-                    if string in dictionary_of_includes:
-                        dictionary_of_includes[string] += 1
+                # regex include "#include stdio.h" and "#include "stdio.h""
+                if line.startswith("#include"):
+                    if line.startswith("#include <"):
+                        include = re.findall(r"#include\s*<(.*)>", line)[0]
                     else:
-                        dictionary_of_includes[string] = 1
+                        include = re.findall(r"#include\s*\"(.*)\"", line)[0]
+                    if include in dictionary_of_includes:
+                        dictionary_of_includes[include] += 1
+                    else:
+                        dictionary_of_includes[include] = 1
+                # function = re.findall(r"#include <[A-Za-z0-9_]+\.h>", line)
+                # if function:
+                #    string = function[0]
+                #    if string in dictionary_of_includes:
+                #        dictionary_of_includes[string] += 1
+                #    else:
+                #        dictionary_of_includes[string] = 1
     return dictionary_of_includes
 
 
 def save_as_csv(filepaths, dictionary):
     """Saves the dictionary as a csv file."""
     with open("includes_names.csv", "w") as file:
-        file.write("Function name, Count\n")
+        file.write("File name, Count\n")
         for key, value in dictionary.items():
             file.write(f"{key}, {value}\n")
 
