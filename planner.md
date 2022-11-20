@@ -1,6 +1,6 @@
 # Things to condsider
 
-Code base will be a mess for now cos will be adding features before considerng how everyting should be organized.
+Codebase will be a mess for now cos will be adding features before considerng how everyting should be organized.
 
 <!---
 .md link
