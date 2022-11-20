@@ -22,6 +22,6 @@ Codebase will be a mess for now cos will be adding features before considerng ho
 1. Use [pycparser](https://pypi.org/project/pycparser/) tokenizer to get rid of brute force string parsing.
 1. Check that function names use wanted convention.
 1. Check that files use wanted convention.
-1. Add [pycparser](https://docs.python.org/3/howto/curses.html) gui.
+1. Add [curses](https://docs.python.org/3/howto/curses.html) gui.
     1. Possible visualisations.
 1. Data storage module instead of csv files.
