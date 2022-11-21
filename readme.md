@@ -7,6 +7,7 @@ Tool for analyzing C codebase.
 
 Currently implemented
 - analyze function frequency and export to csv
+- include frequenzy
 
 <!---image --->
 ![image](pics/screenshot.png)
