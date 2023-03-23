@@ -8,7 +8,6 @@ It then saves the function names and their count as a csv file.
 """
 
 import re
-from os import walk
 from timeit import default_timer as timer
 
 from args import arg_parser, welcome_banner
