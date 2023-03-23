@@ -1,7 +1,7 @@
-from args import arg_parser, welcome_banner
-from parse import get_file_paths, get_function_names, sort_by_count, save_as_csv
-
 from timeit import default_timer as timer
+
+from args import arg_parser, welcome_banner
+from parse import get_file_paths, get_function_names, save_as_csv, sort_by_count
 
 if __name__ == "__main__":
     """Main function to run the script."""

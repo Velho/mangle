@@ -9,14 +9,12 @@ It then saves the function names and their count as a csv file.
 
 import re
 from os import walk
-from timeit import default_timer as timer
-
 
 
 def get_file_paths(path):
     """Returns a list of all file paths in the given directory tree."""
     list_of_file_paths = []
-    for (dirpath, dirnames, filenames) in walk(path):
+    for dirpath, dirnames, filenames in walk(path):
         for filename in filenames:
             if filename.endswith(".c") or filename.endswith(".h"):
                 list_of_file_paths.append(dirpath + "\\" + filename)
