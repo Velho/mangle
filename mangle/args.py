@@ -36,6 +36,11 @@ def arg_parser():
     return the help message.
     """
     parser = init_parser()
+
+    args = testing_args(parser)
+    if args.test is not None:
+        return args
+
     args = get_args(parser)
 
     if args is Empty:
@@ -58,6 +63,7 @@ def init_parser():
         help="Input project folder.",
         default=DEFAULT_PROJECT_PATH,
         type=str,
+        required=False
     )
     parser.add_argument(
         "--output",
@@ -65,9 +71,17 @@ def init_parser():
         help="Output for the csv, provide the whole folder/file.csv.",
         default=DEFAULT_OUTPUT_PATH,
         type=str,
+        required=False
     )
 
     return parser
+
+
+def testing_args(parser: ArgumentParser):
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument('-t', '--test')
+    group.add_argument('-f', '--file')
+    return parser.parse_args()
 
 
 def get_args(parser):
